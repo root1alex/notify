@@ -25,7 +25,7 @@ btn.addEventListener('click', () => {
   const t =
     new Date(2018, 11, 17, hour.value, min.value, sec.value)
       .getTime() - Date.now()
-  setTimeout(() => new Notification('test'), t)
+  setTimeout(() => alert('test'), t)
 })
 
   </script>
