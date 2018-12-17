@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <label>hour</label>
+  <input id="hour" type="text">
+  <label>min</label>
+  <input id="min" type="text">
+  <label>sec</label>
+  <input id="sec" type="text">
+  <button id="btn">Set</button>
+
+  <script>
+
+const min = document.getElementById('min')
+const hour = document.getElementById('hour')
+const sec = document.getElementById('sec')
+const btn = document.getElementById('btn')
+
+btn.addEventListener('click', () => {
+  console.log(`${hour.value}:${min.value}:${sec.value}`)
+  const t =
+    new Date(2018, 11, 17, hour.value, min.value, sec.value)
+      .getTime() - Date.now()
+  setTimeout(() => new Notification('test'), t)
+})
+
+  </script>
+</body>
+</html>
